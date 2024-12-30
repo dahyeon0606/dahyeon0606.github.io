@@ -22,7 +22,7 @@ title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "dahyeon"
 description              : "아자아자 화이팅"
-url                      : "https://dahyeon0606.github.io"
+url                      : "https://dahyeon0606.github.io/hadah.github.io/"
 baseurl                  : ""
 repository               : "dahyeon0606/hadah.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
