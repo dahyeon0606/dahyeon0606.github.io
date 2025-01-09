@@ -1,9 +1,9 @@
 
 
 {
-  "name": "Chirpy",
-  "short_name": "Chirpy",
-  "description": "A minimal, responsive and feature-rich Jekyll theme for technical writing.",
+  "name": "DaDevLog",
+  "short_name": "DaDevLog",
+  "description": "아자아자 화이팅",
   "icons": [
     {
       "src": "/assets/img/favicons/android-chrome-192x192.png",

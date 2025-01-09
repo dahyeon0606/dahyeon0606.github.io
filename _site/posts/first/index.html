@@ -14,7 +14,7 @@
 
 
 <!-- `site.alt_lang` can specify a language different from the UI -->
-<html lang="en" >
+<html lang="ko" data-mode="light">
   <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
@@ -30,26 +30,24 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Customize the Favicon" />
-<meta name="author" content="Cotes Chung" />
-<meta property="og:locale" content="en" />
-<meta name="description" content="The favicons of Chirpy are placed in the directory assets/img/favicons/. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons." />
-<meta property="og:description" content="The favicons of Chirpy are placed in the directory assets/img/favicons/. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons." />
-<link rel="canonical" href="http://localhost:4000/posts/customize-the-favicon/" />
-<meta property="og:url" content="http://localhost:4000/posts/customize-the-favicon/" />
-<meta property="og:site_name" content="Chirpy" />
+<meta property="og:title" content="이분탐색/이진탐색" />
+<meta property="og:locale" content="ko" />
+<meta name="description" content="기본 개념 배열 내부의 값이 정렬이 되어 있을 때 사용 가능하다 변수 3개(start, mid, end)를 이용하여 원하는 값을 찾는 알고리즘 이다 시간복잡도: O(logN), n은 이분 탐색을 진행하는 리스트의 크기" />
+<meta property="og:description" content="기본 개념 배열 내부의 값이 정렬이 되어 있을 때 사용 가능하다 변수 3개(start, mid, end)를 이용하여 원하는 값을 찾는 알고리즘 이다 시간복잡도: O(logN), n은 이분 탐색을 진행하는 리스트의 크기" />
+<link rel="canonical" href="http://localhost:4000/posts/first/" />
+<meta property="og:url" content="http://localhost:4000/posts/first/" />
+<meta property="og:site_name" content="DaDevLog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-08-11T00:34:00+08:00" />
+<meta property="article:published_time" content="2025-01-09T15:10:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Customize the Favicon" />
+<meta property="twitter:title" content="이분탐색/이진탐색" />
 <meta name="twitter:site" content="@twitter_username" />
-<meta name="twitter:creator" content="@cotes2020" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Cotes Chung","url":"https://github.com/cotes2020/"},"dateModified":"2019-08-11T00:34:00+08:00","datePublished":"2019-08-11T00:34:00+08:00","description":"The favicons of Chirpy are placed in the directory assets/img/favicons/. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons.","headline":"Customize the Favicon","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/customize-the-favicon/"},"url":"http://localhost:4000/posts/customize-the-favicon/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-09T15:10:00+09:00","datePublished":"2025-01-09T15:10:00+09:00","description":"기본 개념 배열 내부의 값이 정렬이 되어 있을 때 사용 가능하다 변수 3개(start, mid, end)를 이용하여 원하는 값을 찾는 알고리즘 이다 시간복잡도: O(logN), n은 이분 탐색을 진행하는 리스트의 크기","headline":"이분탐색/이진탐색","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/first/"},"url":"http://localhost:4000/posts/first/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Customize the Favicon | Chirpy
+  <title>이분탐색/이진탐색 | DaDevLog
   </title>
 
   <!--
@@ -63,15 +61,14 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
 
-  <link rel="manifest" href="/assets/img/favicons/site.webmanifest">
+<link rel="manifest" href="/assets/img/favicons/site.webmanifest">
 
 <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
-<meta name="apple-mobile-web-app-title" content="Chirpy">
-<meta name="application-name" content="Chirpy">
+<meta name="apple-mobile-web-app-title" content="DaDevLog">
+<meta name="application-name" content="DaDevLog">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
-
 
   <!-- Resource Hints -->
   
@@ -256,10 +253,10 @@
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
   <header class="profile-wrapper">
-    <a href="/" id="avatar" class="rounded-circle"><img src="https://chirpy-img.netlify.app/commons/avatar.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
+    <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/avatar.png" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
-    <a class="site-title d-block" href="/">Chirpy</a>
-    <p class="site-subtitle fst-italic mb-0">A text-focused Jekyll theme</p>
+    <a class="site-title d-block" href="/">DaDevLog</a>
+    <p class="site-subtitle fst-italic mb-0">아자아자 화이팅</p>
   </header>
   <!-- .profile-wrapper -->
 
@@ -274,58 +271,50 @@
       </li>
       <!-- the real tabs -->
       
-        <li class="nav-item">
-          <a href="/categories/" class="nav-link">
-            <i class="fa-fw fas fa-stream"></i>
-            
+      <li class="nav-item">
+        <a href="/categories/" class="nav-link">
+          <i class="fa-fw fas fa-stream"></i>
+          
 
-            <span>CATEGORIES</span>
-          </a>
-        </li>
-        <!-- .nav-item -->
+          <span>CATEGORIES</span>
+        </a>
+      </li>
+      <!-- .nav-item -->
       
-        <li class="nav-item">
-          <a href="/tags/" class="nav-link">
-            <i class="fa-fw fas fa-tags"></i>
-            
+      <li class="nav-item">
+        <a href="/tags/" class="nav-link">
+          <i class="fa-fw fas fa-tags"></i>
+          
 
-            <span>TAGS</span>
-          </a>
-        </li>
-        <!-- .nav-item -->
+          <span>TAGS</span>
+        </a>
+      </li>
+      <!-- .nav-item -->
       
-        <li class="nav-item">
-          <a href="/archives/" class="nav-link">
-            <i class="fa-fw fas fa-archive"></i>
-            
+      <li class="nav-item">
+        <a href="/archives/" class="nav-link">
+          <i class="fa-fw fas fa-archive"></i>
+          
 
-            <span>ARCHIVES</span>
-          </a>
-        </li>
-        <!-- .nav-item -->
+          <span>ARCHIVES</span>
+        </a>
+      </li>
+      <!-- .nav-item -->
       
-        <li class="nav-item">
-          <a href="/about/" class="nav-link">
-            <i class="fa-fw fas fa-info-circle"></i>
-            
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          <i class="fa-fw fas fa-info-circle"></i>
+          
 
-            <span>ABOUT</span>
-          </a>
-        </li>
-        <!-- .nav-item -->
+          <span>ABOUT</span>
+        </a>
+      </li>
+      <!-- .nav-item -->
       
     </ul>
   </nav>
 
-  <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
-    
-      <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
-        <i class="fas fa-adjust"></i>
-      </button>
-
-      
-        <span class="icon-border"></span>
-      
+  <!-- <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
     
 
     
@@ -333,7 +322,7 @@
 
       
         <a
-          href="https://github.com/github_username"
+          href="https://github.com/dahyeon0606"
           aria-label="github"
           
 
@@ -379,7 +368,7 @@
 
       
         <a
-          href="javascript:location.href = 'mailto:' + ['example','domain.com'].join('@')"
+          href="javascript:location.href = 'mailto:' + ['hada3817','gmail.com'].join('@')"
           aria-label="email"
           
 
@@ -411,11 +400,10 @@
         </a>
       
     
-  </div>
+  </div> -->
   <!-- .sidebar-bottom -->
 </aside>
 <!-- #sidebar -->
-
 
     <div id="main-wrapper" class="d-flex justify-content-center">
       <div class="container d-flex flex-column px-xxl-5">
@@ -442,7 +430,7 @@
         
           
             
-              <span>Customize the Favicon</span>
+              <span>이분탐색/이진탐색</span>
             
 
           
@@ -554,6 +542,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -561,6 +560,38 @@
   
   
 
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
   
 
   
@@ -589,7 +620,7 @@
 
 <article class="px-1" data-toc="true">
   <header>
-    <h1 data-toc-skip>Customize the Favicon</h1>
+    <h1 data-toc-skip>이분탐색/이진탐색</h1>
     
 
     <div class="post-meta text-muted">
@@ -606,13 +637,13 @@
 
 <time
   
-  data-ts="1565454840"
+  data-ts="1736403000"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Aug 11, 2019
+  Jan  9, 2025
 </time>
 
       </span>
@@ -631,10 +662,7 @@
 
           <em>
             
-              
-                <a href="https://github.com/cotes2020/">Cotes Chung</a>
-                
-              
+              <a href="https://twitter.com/username">HaDaHyeon</a>
             
           </em>
         </span>
@@ -664,9 +692,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="212 words"
+  title="384 words"
 >
-  <em>1 min</em> read</span>
+  <em>2 min</em> read</span>
 
         </div>
       </div>
@@ -675,7 +703,7 @@
 
   
     <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">
-      <span class="label text-truncate">Customize the Favicon</span>
+      <span class="label text-truncate">이분탐색/이진탐색</span>
       <button type="button" class="toc-trigger btn me-1">
         <i class="fa-solid fa-list-ul fa-fw"></i>
       </button>
@@ -688,7 +716,7 @@
 
     <dialog id="toc-popup" class="p-0">
       <div class="header d-flex flex-row align-items-center justify-content-between">
-        <div class="label text-truncate py-2 ms-4">Customize the Favicon</div>
+        <div class="label text-truncate py-2 ms-4">이분탐색/이진탐색</div>
         <button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75">
           <i class="fas fa-close"></i>
         </button>
@@ -698,55 +726,63 @@
   
 
   <div class="content">
-    <p>The <a href="https://www.favicon-generator.org/about/">favicons</a> of <a href="https://github.com/cotes2020/jekyll-theme-chirpy/"><strong>Chirpy</strong></a> are placed in the directory <code class="language-plaintext filepath highlighter-rouge">assets/img/favicons/</code>. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons.</p>
-
-<h2 id="generate-the-favicon"><span class="me-2">Generate the favicon</span><a href="#generate-the-favicon" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<p>Prepare a square image (PNG, JPG, or SVG) with a size of 512x512 or more, and then go to the online tool <a href="https://realfavicongenerator.net/"><strong>Real Favicon Generator</strong></a> and click the button <kbd>Select your Favicon image</kbd> to upload your image file.</p>
-
-<p>In the next step, the webpage will show all usage scenarios. You can keep the default options, scroll to the bottom of the page, and click the button <kbd>Generate your Favicons and HTML code</kbd> to generate the favicon.</p>
-
-<h2 id="download--replace"><span class="me-2">Download &amp; Replace</span><a href="#download--replace" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<p>Download the generated package, unzip and delete the following two from the extracted files:</p>
-
+    <h2 id="기본-개념"><span class="me-2">기본 개념</span><a href="#기본-개념" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <ul>
-  <li><code class="language-plaintext filepath highlighter-rouge">browserconfig.xml</code></li>
-  <li><code class="language-plaintext filepath highlighter-rouge">site.webmanifest</code></li>
+  <li>배열 내부의 값이 정렬이 되어 있을 때 사용 가능하다</li>
+  <li>변수 3개(start, mid, end)를 이용하여 원하는 값을 찾는 알고리즘 이다</li>
+  <li>시간복잡도: O(logN), n은 이분 탐색을 진행하는 리스트의 크기</li>
 </ul>
 
-<p>And then copy the remaining image files (<code class="language-plaintext filepath highlighter-rouge">.PNG</code> and <code class="language-plaintext filepath highlighter-rouge">.ICO</code>) to cover the original files in the directory <code class="language-plaintext filepath highlighter-rouge">assets/img/favicons/</code> of your Jekyll site. If your Jekyll site doesn’t have this directory yet, just create one.</p>
+<p><br /><br /><br /><br /></p>
 
-<p>The following table will help you understand the changes to the favicon files:</p>
+<h2 id="반복문을-이용한-구현"><span class="me-2">반복문을 이용한 구현</span><a href="#반복문을-이용한-구현" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">binarySearch</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="k">while</span> <span class="n">start</span> <span class="o">&lt;=</span> <span class="n">end</span><span class="p">:</span>
+        <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">start</span> <span class="o">+</span> <span class="n">end</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="k">if</span> <span class="n">array</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">==</span> <span class="n">k</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">mid</span>
+        <span class="k">elif</span> <span class="n">array</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">k</span><span class="p">:</span>
+            <span class="n">end</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+</pre></td></tr></tbody></table></code></div></div>
 
-<div class="table-wrapper"><table>
-  <thead>
-    <tr>
-      <th>File(s)</th>
-      <th style="text-align: center">From Online Tool</th>
-      <th style="text-align: center">From Chirpy</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">*.PNG</code></td>
-      <td style="text-align: center">✓</td>
-      <td style="text-align: center">✗</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">*.ICO</code></td>
-      <td style="text-align: center">✓</td>
-      <td style="text-align: center">✗</td>
-    </tr>
-  </tbody>
-</table></div>
+<p><br /><br /><br /><br /></p>
 
-<!-- markdownlint-disable-next-line -->
-<blockquote class="prompt-info">
-  <p>✓ means keep, ✗ means delete.</p>
-</blockquote>
+<h2 id="나만의-팁"><span class="me-2">나만의 팁</span><a href="#나만의-팁" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="1-이분탐색-문제-구별법"><span class="me-2">1. 이분탐색 문제 구별법</span><a href="#1-이분탐색-문제-구별법" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>The next time you build the site, the favicon will be replaced with a customized edition.</p>
+<p>문제에 입력 값이 매우 큰 수가 나오는 경우가 많은데, 문제 자체가 완전 탐색으로 풀면 풀릴 것 같은 느낌이 듬</p>
+
+<h3 id="2-문제-접근법"><span class="me-2">2. 문제 접근법</span><a href="#2-문제-접근법" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ol>
+  <li>
+    <p>이분 탐색으로 풀어야 한다고 판단이 되면,</p>
+
+    <p><span style="color: red;">출력값에 대한 범위를 구해보기 = start, end 에 가능한 값이 무엇일까 생각해보기</span><br />
+ ‘출력될 수 있는 최소의 값 ~ 출력될 수 있는 최대의 값’ 이 범위에서 이분 탐색을 진행한다고 생각하기</p>
+  </li>
+  <li>
+    <p>범위가 구해지면, 문제 조건에 맞게 범위의 값을 조절하기
+    (백준의 경우 이 부분이 문제 레벨에 따라 난이도가 갈리는 듯,’나무자르기-실버’의 경우 이 부분이 쉽게 생각나고, ‘공유기설치-골드’의 경우 이 부분이 어려웠음)</p>
+  </li>
+</ol>
 
   </div>
 
@@ -756,22 +792,12 @@
       <div class="post-meta mb-3">
         <i class="far fa-folder-open fa-fw me-1"></i>
         
-          <a href="/categories/blogging/">Blogging</a>,
-          <a href="/categories/tutorial/">Tutorial</a>
+          <a href="/categories/algorithm/">Algorithm</a>,
+          <a href="/categories/theory/">Theory</a>
       </div>
     
 
     <!-- tags -->
-    
-      <div class="post-tags">
-        <i class="fa fa-tags fa-fw me-1"></i>
-        
-          <a
-            href="/tags/favicon/"
-            class="post-tag no-text-decoration"
-          >favicon</a>
-        
-      </div>
     
 
     <div
@@ -805,21 +831,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Customize%20the%20Favicon%20-%20Chirpy&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fcustomize-the-favicon%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89%20-%20DaDevLog&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Ffirst%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Customize%20the%20Favicon%20-%20Chirpy&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fcustomize-the-favicon%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89%20-%20DaDevLog&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Ffirst%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fcustomize-the-favicon%2F&text=Customize%20the%20Favicon%20-%20Chirpy" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Ffirst%2F&text=%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89/%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89%20-%20DaDevLog" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -874,28 +900,14 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/customize-the-favicon/">Customize the Favicon</a>
+          <a href="/posts/oldBlog/">예전 블로그</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/getting-started/">Getting Started</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/write-a-new-post/">Writing a New Post</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/text-and-typography/">Text and Typography</a>
+          <a href="/posts/first/">이분탐색/이진탐색</a>
         </li>
       
     </ul>
@@ -919,104 +931,7 @@
 
 
 
-  
-    
-    
-    
-    
-      
-        
-        
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-
-
-  <section>
-    <h2 class="panel-heading">Trending Tags</h2>
-    <div class="d-flex flex-wrap mt-3 mb-1 me-3">
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/favicon/">favicon</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/getting-started/">getting started</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/typography/">typography</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/writing/">writing</a>
-      
-    </div>
-  </section>
 
 
             </div>
@@ -1073,42 +988,6 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
 
 
@@ -1120,100 +999,6 @@
 
 
 
-  <aside id="related-posts" aria-labelledby="related-label">
-    <h3 class="mb-4" id="related-label">Further Reading</h3>
-    <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
-      
-        <article class="col">
-          <a href="/posts/getting-started/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1565355300"
-  data-df="ll"
-  
->
-  Aug  9, 2019
-</time>
-
-              <h4 class="pt-0 my-2">Getting Started</h4>
-              <div class="text-muted">
-                <p>Get started with Chirpy basics in this comprehensive overview. You will learn how to install, configure, and use your first Chirpy-based website, as well as deploy it to a web server.</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/write-a-new-post/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1565244600"
-  data-df="ll"
-  
->
-  Aug  8, 2019
-</time>
-
-              <h4 class="pt-0 my-2">Writing a New Post</h4>
-              <div class="text-muted">
-                <p>This tutorial will guide you how to write a post in the Chirpy template, and it’s worth reading even if you’ve used Jekyll before, as many features require specific variables to be set.
-
-Naming and...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/text-and-typography/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1565235180"
-  data-df="ll"
-  
->
-  Aug  8, 2019
-</time>
-
-              <h4 class="pt-0 my-2">Text and Typography</h4>
-              <div class="text-muted">
-                <p>Examples of text, typography, math equations, diagrams, flowcharts, pictures, videos, and more.</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-    </nav>
-  </aside>
-  <!-- #related-posts -->
-
 
             
               
@@ -1224,19 +1009,19 @@ Naming and...</p>
   
 
   
-    <a
-      href="/posts/getting-started/"
-      class="btn btn-outline-primary"
-      aria-label="Older"
-    >
-      <p>Getting Started</p>
-    </a>
+    <div class="btn btn-outline-primary disabled" aria-label="Older">
+      <p>-</p>
+    </div>
   
 
   
-    <div class="btn btn-outline-primary disabled" aria-label="Newer">
-      <p>-</p>
-    </div>
+    <a
+      href="/posts/oldBlog/"
+      class="btn btn-outline-primary"
+      aria-label="Newer"
+    >
+      <p>예전 블로그</p>
+    </a>
   
 </nav>
 
@@ -1255,7 +1040,7 @@ Naming and...</p>
     <time>2025</time>
 
     
-      <a href="https://twitter.com/username">your_full_name</a>.
+      <a href="https://twitter.com/username">HaDaHyeon</a>.
     
 
     
@@ -1302,104 +1087,7 @@ Naming and...</p>
 
 
 
-  
-    
-    
-    
-    
-      
-        
-        
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-
-
-  <section>
-    <h2 class="panel-heading">Trending Tags</h2>
-    <div class="d-flex flex-wrap mt-3 mb-1 me-3">
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/favicon/">favicon</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/getting-started/">getting started</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/typography/">typography</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/writing/">writing</a>
-      
-    </div>
-  </section>
 
 
     </div>
