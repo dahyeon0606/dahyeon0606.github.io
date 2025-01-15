@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>DaDevLog</title>
   <subtitle>아자아자 화이팅</subtitle>
-  <updated>2025-01-15T15:48:27+09:00</updated>
+  <updated>2025-01-15T16:05:38+09:00</updated>
   <author>
     <name>HaDaHyeon</name>
     <uri>http://localhost:4000/</uri>
@@ -66,13 +66,10 @@
 커밋 히스토리를 되돌리고, 특정 커밋 시점의 상태로 돌아가게 함
 
 
-  git log 
-  돌아갈 커밋의 해시를 복사
+  git log : 돌아갈 커밋의 해시를 복사
   
   
-    git reset --hard {돌아갈 커밋의 해시}
-
-    해당 커밋을 했던 시점의 코드로 변경됨, 해당 커밋 이후의 커밋은 사라짐(초기화)
+    git reset --hard {돌아갈 커밋의 해시} : 해당 커밋을 했던 시점의 코드로 변경됨, 해당 커밋 이후의 커밋은 사라짐(초기화)
 
      -- hard: working directory의 변경 사항도 모두 초기화
  -- soft: 커밋만 되돌리고, staging area&amp;amp;amp;working directory는 유지
@@ -87,7 +84,7 @@ Revert
 특정 커밋을 되돌리되, 기존 커밋 히스토리를 보존하면서 새로운 커밋을 생성
 
 
-  git...</summary>
+  git log...</summary>
 
   </entry>
 
@@ -97,7 +94,7 @@ Revert
     <link href="http://localhost:4000/posts/first/" rel="alternate" type="text/html" title="Algorithm/Theory - 이분탐색/이진탐색" />
     <published>2025-01-09T15:10:00+09:00</published>
   
-    <updated>2025-01-09T15:10:00+09:00</updated>
+    <updated>2025-01-15T15:49:19+09:00</updated>
   
     <id>http://localhost:4000/posts/first/</id>
     <content type="text/html" src="http://localhost:4000/posts/first/" />
