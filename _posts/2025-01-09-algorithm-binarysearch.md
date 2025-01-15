@@ -1,9 +1,9 @@
 ---
-title: Algorithm/Theory - 이분탐색/이진탐색
+title: "[Algorithm - 이론] 이분탐색(이진탐색)"
 date: 2025-01-09 14:10:00 +0800
-categories: [Algorithm, Theory]
-# tags: [writing]
-render_with_liquid: false
+categories: [Algorithm, 이론]
+# pin: true
+# render_with_liquid: false
 ---
 
 ## 기본 개념

@@ -1,8 +1,25 @@
 [
   
   {
-    "title": "예전 블로그",
-    "url": "/posts/oldBlog/",
+    "title": "[Git&GitHub - 기본개념] 이전 커밋으로 돌아가기_reset,revert",
+    "url": "/posts/git-revert/",
+    "categories": "Git&GitHub, 기본개념",
+    "tags": "",
+    "date": "2025-01-15 14:10:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "Reset커밋 히스토리를 되돌리고, 특정 커밋 시점의 상태로 돌아가게 함  git log : 돌아갈 커밋의 해시를 복사        git reset --hard {돌아갈 커밋의 해시} : 해당 커밋을 했던 시점의 코드로 변경됨, 해당 커밋 이후의 커밋은 사라짐(초기화)     -- hard: working directory의 변경 사항도 모두 초기화...",
+    "content": "Reset커밋 히스토리를 되돌리고, 특정 커밋 시점의 상태로 돌아가게 함  git log : 돌아갈 커밋의 해시를 복사        git reset --hard {돌아갈 커밋의 해시} : 해당 커밋을 했던 시점의 코드로 변경됨, 해당 커밋 이후의 커밋은 사라짐(초기화)     -- hard: working directory의 변경 사항도 모두 초기화 -- soft: 커밋만 되돌리고, staging area&amp;working directory는 유지 -- mixed: 커밋&amp;staging area 되돌리고, working directory는 유지      Revert특정 커밋을 되돌리되, 기존 커밋 히스토리를 보존하면서 새로운 커밋을 생성  git log : 취소하고 싶은 커밋의 해시를 복사  git revert {특정 커밋 해시} : 특정  커밋의 변경 사항을 되돌리는 새로운 커밋을 생성협업 중인 프로젝트에서 안전하게 커밋을 되돌릴때 사용Revert 실습 실습 목표첫번째 커밋: a.txt 파일 생성 \"나는 첫번째 글\" 추가두번째 커밋: a.txt 파일 \"나는 두번째 글\" 추가세번째 커밋: a.txt 파일 \"나는 세번째 글\" 추가네번째 커밋: b.txt 파일 생성 \"1\" 추가두번째 커밋으로 revert 했을 때, 결과는 ??  첫번째 커밋          git add .      git commit -m \"first\"        두번째 커밋          git add .      git commit -m \"add second line\"        세번째 커밋          git add .      git commit -m \"add third line\"        네번째 커밋          git add .      git commit -m \"add b.txt\"        두번째 커밋으로 revert          git log : 두번째 커밋의 해시값 얻기      git revert d3256309b1f4d45d01d : 두번째 커밋의 해시값 일부 복사하여 revert         결과두번째 커밋의 변경 사항을 되돌리는 것이기 때문에 \"나는 첫번째 글\" 만 남는다b.txt 파일의 변경사항은 두번째 커밋과 관련이 없기 때문에 제거되지 않고 남아있게 된다."
+  },
+  
+  {
+    "title": "[Old Blog] 네이버 블로그",
+    "url": "/posts/oldblog/",
     "categories": "Old Blog",
     "tags": "",
     "date": "2025-01-09 18:10:00 +0900",
@@ -18,26 +35,9 @@
   },
   
   {
-    "title": "Git & GitHub - 이전 커밋으로 돌아가기_reset,revert",
-    "url": "/posts/revert/",
-    "categories": "Git & GitHub",
-    "tags": "",
-    "date": "2025-01-09 18:10:00 +0900",
-    
-
-
-
-
-
-    
-    "snippet": "Reset커밋 히스토리를 되돌리고, 특정 커밋 시점의 상태로 돌아가게 함  git log : 돌아갈 커밋의 해시를 복사        git reset --hard {돌아갈 커밋의 해시} : 해당 커밋을 했던 시점의 코드로 변경됨, 해당 커밋 이후의 커밋은 사라짐(초기화)     -- hard: working directory의 변경 사항도 모두 초기화...",
-    "content": "Reset커밋 히스토리를 되돌리고, 특정 커밋 시점의 상태로 돌아가게 함  git log : 돌아갈 커밋의 해시를 복사        git reset --hard {돌아갈 커밋의 해시} : 해당 커밋을 했던 시점의 코드로 변경됨, 해당 커밋 이후의 커밋은 사라짐(초기화)     -- hard: working directory의 변경 사항도 모두 초기화 -- soft: 커밋만 되돌리고, staging area&amp;working directory는 유지 -- mixed: 커밋&amp;staging area 되돌리고, working directory는 유지      Revert특정 커밋을 되돌리되, 기존 커밋 히스토리를 보존하면서 새로운 커밋을 생성  git log : 취소하고 싶은 커밋의 해시를 복사  git revert {특정 커밋 해시} : 특정  커밋의 변경 사항을 되돌리는 새로운 커밋을 생성협업 중인 프로젝트에서 안전하게 커밋을 되돌릴때 사용Revert 실습 실습 목표첫번째 커밋: a.txt 파일 생성 \"나는 첫번째 글\" 추가두번째 커밋: a.txt 파일 \"나는 두번째 글\" 추가세번째 커밋: a.txt 파일 \"나는 세번째 글\" 추가네번째 커밋: b.txt 파일 생성 \"1\" 추가두번째 커밋으로 revert 했을 때, 결과는 ??  첫번째 커밋          git add .      git commit -m \"first\"        두번째 커밋          git add .      git commit -m \"add second line\"        세번째 커밋          git add .      git commit -m \"add third line\"        네번째 커밋          git add .      git commit -m \"add b.txt\"        두번째 커밋으로 revert          git log : 두번째 커밋의 해시값 얻기      git revert d3256309b1f4d45d01d : 두번째 커밋의 해시값 일부 복사하여 revert         결과두번째 커밋의 변경 사항을 되돌리는 것이기 때문에 \"나는 첫번째 글\" 만 남는다b.txt 파일의 변경사항은 두번째 커밋과 관련이 없기 때문에 제거되지 않고 남아있게 된다."
-  },
-  
-  {
-    "title": "Algorithm/Theory - 이분탐색/이진탐색",
-    "url": "/posts/first/",
-    "categories": "Algorithm, Theory",
+    "title": "[Algorithm - 이론] 이분탐색(이진탐색)",
+    "url": "/posts/algorithm-binarysearch/",
+    "categories": "Algorithm, 이론",
     "tags": "",
     "date": "2025-01-09 15:10:00 +0900",
     

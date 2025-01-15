@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>DaDevLog</title>
   <subtitle>아자아자 화이팅</subtitle>
-  <updated>2025-01-15T16:05:38+09:00</updated>
+  <updated>2025-01-15T17:14:29+09:00</updated>
   <author>
     <name>HaDaHyeon</name>
     <uri>http://localhost:4000/</uri>
@@ -20,45 +20,23 @@
 
   
   <entry>
-    <title>예전 블로그</title>
-    <link href="http://localhost:4000/posts/oldBlog/" rel="alternate" type="text/html" title="예전 블로그" />
-    <published>2025-01-09T18:10:00+09:00</published>
+    <title>[Git&amp;GitHub - 기본개념] 이전 커밋으로 돌아가기_reset,revert</title>
+    <link href="http://localhost:4000/posts/git-revert/" rel="alternate" type="text/html" title="[Git&amp;amp;GitHub - 기본개념] 이전 커밋으로 돌아가기_reset,revert" />
+    <published>2025-01-15T14:10:00+09:00</published>
   
-    <updated>2025-01-09T18:10:00+09:00</updated>
+    <updated>2025-01-15T14:10:00+09:00</updated>
   
-    <id>http://localhost:4000/posts/oldBlog/</id>
-    <content type="text/html" src="http://localhost:4000/posts/oldBlog/" />
+    <id>http://localhost:4000/posts/git-revert/</id>
+    <content type="text/html" src="http://localhost:4000/posts/git-revert/" />
     <author>
       <name>HaDaHyeon</name>
     </author>
 
   
     
-    <category term="Old Blog" />
+    <category term="Git&amp;GitHub" />
     
-  
-
-  <summary>https://blog.naver.com/hada0413/</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Git &amp; GitHub - 이전 커밋으로 돌아가기_reset,revert</title>
-    <link href="http://localhost:4000/posts/revert/" rel="alternate" type="text/html" title="Git &amp;amp; GitHub - 이전 커밋으로 돌아가기_reset,revert" />
-    <published>2025-01-09T18:10:00+09:00</published>
-  
-    <updated>2025-01-09T18:10:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/revert/</id>
-    <content type="text/html" src="http://localhost:4000/posts/revert/" />
-    <author>
-      <name>HaDaHyeon</name>
-    </author>
-
-  
-    
-    <category term="Git &amp; GitHub" />
+    <category term="기본개념" />
     
   
 
@@ -90,14 +68,38 @@ Revert
 
   
   <entry>
-    <title>Algorithm/Theory - 이분탐색/이진탐색</title>
-    <link href="http://localhost:4000/posts/first/" rel="alternate" type="text/html" title="Algorithm/Theory - 이분탐색/이진탐색" />
+    <title>[Old Blog] 네이버 블로그</title>
+    <link href="http://localhost:4000/posts/oldblog/" rel="alternate" type="text/html" title="[Old Blog] 네이버 블로그" />
+    <published>2025-01-09T18:10:00+09:00</published>
+  
+    <updated>2025-01-09T18:10:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/oldblog/</id>
+    <content type="text/html" src="http://localhost:4000/posts/oldblog/" />
+    <author>
+      <name>HaDaHyeon</name>
+    </author>
+
+  
+    
+    <category term="Old Blog" />
+    
+  
+
+  <summary>https://blog.naver.com/hada0413/</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>[Algorithm - 이론] 이분탐색(이진탐색)</title>
+    <link href="http://localhost:4000/posts/algorithm-binarysearch/" rel="alternate" type="text/html" title="[Algorithm - 이론] 이분탐색(이진탐색)" />
     <published>2025-01-09T15:10:00+09:00</published>
   
-    <updated>2025-01-15T15:49:19+09:00</updated>
+    <updated>2025-01-09T15:10:00+09:00</updated>
   
-    <id>http://localhost:4000/posts/first/</id>
-    <content type="text/html" src="http://localhost:4000/posts/first/" />
+    <id>http://localhost:4000/posts/algorithm-binarysearch/</id>
+    <content type="text/html" src="http://localhost:4000/posts/algorithm-binarysearch/" />
     <author>
       <name>HaDaHyeon</name>
     </author>
@@ -106,7 +108,7 @@ Revert
     
     <category term="Algorithm" />
     
-    <category term="Theory" />
+    <category term="이론" />
     
   
 

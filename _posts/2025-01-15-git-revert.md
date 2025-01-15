@@ -1,9 +1,9 @@
 ---
-title: Git & GitHub - 이전 커밋으로 돌아가기_reset,revert
-date: 2025-01-09 17:10:00 +0800
-categories: [Git & GitHub]
-# tags: [writing]
-render_with_liquid: false
+title: "[Git&GitHub - 기본개념] 이전 커밋으로 돌아가기_reset,revert"
+date: 2025-01-15 13:10:00 +0800
+categories: [Git&GitHub, 기본개념]
+# pin: true
+# render_with_liquid: false
 ---
 
 
