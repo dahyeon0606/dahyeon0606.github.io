@@ -1,6 +1,6 @@
 ---
 title: "[Backend - Springboot] 백엔드 서버 배포 및 ci-cd"
-date: 2025-02-01 2:00:00 +0800
+date: 2025-02-02 2:00:00 +0800
 categories: [Backend, Springboot]
 # pin: true
 # render_with_liquid: false
