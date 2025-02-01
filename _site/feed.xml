@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>DaDevLog</title>
   <subtitle>아자아자 화이팅</subtitle>
-  <updated>2025-01-15T17:14:29+09:00</updated>
+  <updated>2025-02-02T02:52:40+09:00</updated>
   <author>
     <name>HaDaHyeon</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,59 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>[Backend - Springboot] 백엔드 서버 배포 및 ci-cd</title>
+    <link href="http://localhost:4000/posts/backend-cicd/" rel="alternate" type="text/html" title="[Backend - Springboot] 백엔드 서버 배포 및 ci-cd" />
+    <published>2025-02-01T03:00:00+09:00</published>
+  
+    <updated>2025-02-01T03:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/backend-cicd/</id>
+    <content type="text/html" src="http://localhost:4000/posts/backend-cicd/" />
+    <author>
+      <name>HaDaHyeon</name>
+    </author>
+
+  
+    
+    <category term="Backend" />
+    
+    <category term="Springboot" />
+    
+  
+
+  <summary>1. 기본 서버 세팅
+
+ aws 인스턴스 생성
+
+
+
+ 
+
+펨키는 이때 밖에 다운로드 못하니 잘 간직하기
+
+참고) 사진에는 handali-key가 펨키인데, 해당 인스턴스 지우고 다시 만들어서 handali-app-key라는 새로운 팸키를 사용중임
+
+
+
+인스턴스 유형 잘 고려해서 선택하기, 무료로 제공하는 건 정말 간단한 프로젝트에서만 사용 가능, 현재는 t2.medium 사용중 (인스턴스만 몇 번을 중지했다 시작했다, 없앴다 만들었는 지 모름 ㅎ)
+
+
+
+
+
+
+서버에 접속
+퍼블릭 IPv4 주소: 43.201.250.84
+
+펨키 파일 명 : handali-app-key.pem
+
+chmod 400 handali-app-key.pem
+ssh -i handali-app-key.pem ubuntu@43.201.2...</summary>
+
+  </entry>
 
   
   <entry>
