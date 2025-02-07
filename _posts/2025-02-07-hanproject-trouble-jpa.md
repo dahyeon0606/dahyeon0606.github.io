@@ -1,6 +1,6 @@
 ---
 title: "[HanProject - Troubleshooting] JPA, mysql auto_increment 적용 안되는 오류"  # 문서 제목 입력
-date: 2025-02-06 12:35:24  # 자동으로 오늘 날짜와 시간을 입력
+date: 2025-02-07 12:35:24  # 자동으로 오늘 날짜와 시간을 입력
 categories: [HanProject, Troubleshooting]
 # pin: true
 # render_with_liquid: false
