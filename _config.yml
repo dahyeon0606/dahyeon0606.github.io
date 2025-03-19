@@ -1,3 +1,7 @@
+#구글 검색 엔진 노출
+plugins:
+  - jekyll-sitemap
+
 # The Site Configuration
 
 # Import the theme
