@@ -1,6 +1,6 @@
 ---
 title: "[HanProject - Backend] <맥북을 서버로 사용하기-2>  스프링부트 실행을 위한 환경 설정"  # 문서 제목 입력
-date: 2025-03-25 21:20:49  # 자동으로 오늘 날짜와 시간을 입력
+date: 2025-03-25 21:20:49  +0800# 자동으로 오늘 날짜와 시간을 입력
 categories: [HanProject, Backend]
 # pin: true
 # render_with_liquid: false

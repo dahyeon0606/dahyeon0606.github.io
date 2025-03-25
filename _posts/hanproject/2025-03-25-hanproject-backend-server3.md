@@ -1,6 +1,6 @@
 ---
 title: "[HanProject - Backend] <맥북을 서버로 사용하기-3>  ssh 키 원격접속 설정 및 깃허브 액션으로 자동 배포"  # 문서 제목 입력
-date: 2025-03-25 21:21:01  # 자동으로 오늘 날짜와 시간을 입력
+date: 2025-03-25 21:21:01 +0800 # 자동으로 오늘 날짜와 시간을 입력
 categories: [HanProject, Backend]
 # pin: true
 # render_with_liquid: false

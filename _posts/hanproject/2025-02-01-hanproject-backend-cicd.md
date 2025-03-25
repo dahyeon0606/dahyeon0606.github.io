@@ -222,7 +222,7 @@ The key's randomart image is:<br>
 cat ~/.ssh/github-actions.pub
 ```
 <blockquote class="prompt-info">  공개키
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDAJxfBLHAPUdIlKQlnIKaI/rJT0aTswZGvwIPBjaJkHvSojJA/rShsQlDcKf/ROnAci2Ql3gXRZLSAV2LhOi9Y9LAFchN2mIu2vD1reYI1sKS3GtjjDlnrBtd54yJ0VJxIdPtceTCqxEQkbmgQ7dBj1NeN4ZGaPRfLWZxiQeC7mbxczk+iscIPImzhrV/M4N5oV0fFRqmzdkgX8f4ckKVWE2oj1iyY6V+KmdvEF3UBj4JK0JPf/Cy5E/KjDQRuG1e8iJgHRb8PzjfSCnIfZwfp6wEk1VNqePkV5f9p2KwDC4sPyCYz4NwQzxIXDzOPWzS/zBDi7sx/Lae/5FlhslqWiqm+kgjtAPXH7B42X8EE3Vi/Dz8rDjJy64CqjWLIkmsdBk7mBA0M6LD9oD3BGsPlxmq0249VrfLaN0jMwRQEmnRciSg58wSGm2u2lgQL6MvOwURDu6mMjIGvzLsbuO4knfkP91B5WNKdU3IxtY6gBLn8rWXhQ++F9UvBCp3FQjNQ6ykc/JNoOR/hv68hXhnpDapcgT1kWcnbtus96R3HCqWiGnrY+0cFu9VS5eeWc6mgAjt8IMgKX1KZz7tHw4pFOkk1jQcUQuqLG/REYR7dVQjj4797gnPABgqOiTpSZithQsvEHTY8hlRdANToB+n0R2lXOZNegP8ccom0fd75BQ== github-actions" >> ~/.ssh/authorized_keys
+ssh-rsa ... github-actions" >> ~/.ssh/authorized_keys
 </blockquote>
 
 서버에 접속 후, 공개 키를 ec2 서버에 등록
