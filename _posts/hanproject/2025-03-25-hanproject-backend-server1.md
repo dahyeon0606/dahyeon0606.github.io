@@ -6,6 +6,17 @@ categories: [HanProject, Backend]
 # render_with_liquid: false
 ---
 
+### 시작
+이전에 AWS 서버를 이용해 프로젝트를 진행했지만, 시간이 지나면서 서버 비용이 부담스럽게 느껴졌다.
+그래서 "차라리 내 노트북을 서버로 써보자!"는 생각이 들었고, 이 과정을 정리해 아래 글로 남기게 되었다.
+
+### 구성하려는 시스템 구조도
+
+깃허브에 푸시하면, 깃허브 액션이 이를 빌드+테스트하여 빌드된 파일을 서버로 넘기고 서버에서 실행 되도록 한다.<br>
+서버에는 스프링부트 빌드 .jar 파일과 Mysql 이 실행 중이고, 프론트로는 리엑트 네이티브를 사용하고 있다.<br>
+
+<img width="843" alt="Image" src="https://github.com/user-attachments/assets/89cfcdbe-57f4-4c70-bc43-d740876f201a" />
+
 ### 잠자기 모드 비활성화
 ```
 sudo pmset -a sleep 0

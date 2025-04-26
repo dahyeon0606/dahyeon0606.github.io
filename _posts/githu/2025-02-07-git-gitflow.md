@@ -3,7 +3,11 @@ title: Git Flow 개념 정리
 date: 2025-02-07 12:50:58
 categories: [Git&GitHub, GitFlow]
 ---
-<img width="526" alt="Image" src="https://github.com/user-attachments/assets/f05fbe4b-358d-428d-b2b1-73db8fb37592" />그림 이해하기!
+
+## 시작
+팀 프로젝트를 진행하면서 브랜치 전략이 필요하다는 것을 절실히 느꼈다. 검색해보니 가장 많이 언급되는 방법이 'Git Flow'였고, 튜터님 역시 추천해주셔서 팀에서도 이를 적용해보기로 결정했다. 이 글은 팀원들에게 Git Flow 전략을 공유하고, 동시에 나 자신도 체계적으로 정리하기 위해 작성했다.
+
+<img width="526" alt="Image" src="https://github.com/user-attachments/assets/f05fbe4b-358d-428d-b2b1-73db8fb37592" />
 
 ## 브랜치 종류 5개
 
@@ -63,3 +67,6 @@ categories: [Git&GitHub, GitFlow]
 
 ### 이미 배포된 기능일 경우 - main 브랜치
 <font color="#ff0000">hotfix/{기능명}</font> 브랜치를 만들어서 사용
+
+## 느낀 점
+깃 플로우 규칙을 직접 사용해 보니, 브랜치 이름이 체계적으로 관리되고 팀원들 사이의 약속이 생긴 것이다 보니 잘 지켜질 때는 정말 편리했다. 하지만 팀원들 모두 처음 사용해보는 전략 이라서 실수가 많았다. 특히, 새로운 기능을 개발할 땐 feature를 develop 에서 만들어야 하는데 다른 feature에서 만들거나, 이전 feature를 그대로 사용하는 경우가 많았다. 또 새로운 릴리즈 버전을 만들 때, 이전 release를 develop에 합치고 없애야 하는데 이 과정을 생략해서 변경 사항이 유실 되는 경우도 생겼다... 그래도 Git Flow를 적용한 지 두 달이 지난 지금은 이런 실수 없이 안정적으로 협업할 수 있게 되어 다행이라고 느낀다.

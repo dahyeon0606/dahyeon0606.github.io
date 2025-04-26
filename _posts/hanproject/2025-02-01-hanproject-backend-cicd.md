@@ -6,6 +6,12 @@ categories: [HanProject, Backend]
 # render_with_liquid: false
 ---
 
+## 시작
+HanProject 백엔드 서버를 AWS EC2에 배포하고, GitHub Actions를 활용하여 CI/CD 환경을 구성하기로 했다.
+처음에는 수동으로 .jar 파일을 서버에 올리고 실행하는 방식으로 진행했지만, 변경사항이 생길 때마다 다시 빌드하고 업로드하는 과정이 너무 번거로웠다.
+따라서 이를 자동화하고 배포 효율을 높이기 위해 GitHub Actions를 도입했다.
+이 글은 AWS 서버 세팅부터 GitHub Actions를 통한 자동 배포까지, 그 과정을 정리한 기록이다.
+
 ## 1. 기본 서버 세팅
 
 <blockquote class="prompt-info"> aws 인스턴스 생성
@@ -222,7 +228,7 @@ The key's randomart image is:<br>
 cat ~/.ssh/github-actions.pub
 ```
 <blockquote class="prompt-info">  공개키
-ssh-rsa ... github-actions" >> ~/.ssh/authorized_keys
+ssh-rsa ...생략 github-actions" >> ~/.ssh/authorized_keys
 </blockquote>
 
 서버에 접속 후, 공개 키를 ec2 서버에 등록
@@ -400,3 +406,9 @@ ps aux | grep java
 
 <br><br>
 <blockquote class="prompt-tip">ci/cd 환경 구성 완료</blockquote>
+
+## 느낀 점
+이번에 AWS EC2에 서버를 배포하고 GitHub Actions로 자동 배포 환경을 구축하면서 CI/CD의 필요성과 중요성을 제대로 체감할 수 있었다.
+특히 서버와 통신할 수 있도록 SSH 키를 설정하고, GitHub에 비밀 키를 등록해 워크플로우를 구성하는 과정이 처음에는 낯설었지만, 하나하나 과정을 밟아가며 이해할 수 있었다.
+수동 배포보다 훨씬 빠르고 안정적으로 서비스를 업데이트할 수 있게 되어 앞으로 다른 프로젝트에서도 CI/CD를 기본 세팅으로 가져가야겠다는 생각이 들었다.
+물론 중간에 SSH 에러나 권한 문제 등 다양한 시행착오가 있었지만, 이런 경험들이 나만의 서버 운영 노하우로 쌓이는 것 같아 뿌듯하다.

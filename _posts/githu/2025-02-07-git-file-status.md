@@ -3,6 +3,10 @@ title: "[Git&GitHub - 기본개념] Git 파일 상태(working directory, staging
 date: 2025-02-07 11:53:26 +0800
 categories: [Git&GitHub, 기본개념]
 ---
+
+## 시작
+VS Code나 IntelliJ를 사용할 때 터미널에 깃 파일 상태가 표시되었지만, 어떤 의미인지 정확히 이해하지 못하고 사용해왔다. 이를 제대로 정리하기 위해 유튜브 강의를 찾아보고, 내용을 정리하게 되었다.
+
 ## git 파일 상태
 ### 1. working directory(local 환경)
 - <font color="#ff0000">unrtracked(U)</font> : 깃이 추적하지 않는 파일, `git add` 명령어로 Staging Area에 추가하면 **Tracked** 상태로 전환됨
@@ -52,3 +56,6 @@ categories: [Git&GitHub, 기본개념]
 - `git status`  : 트래킹, 커밋된 상태에 대해 출력
 - `git log` : commit 로그를 출력
 - `git diff`: 변경된 내용을 구체적으로 확인 (Staging Area와 Working Directory 간의 차이도 확인 가능)
+
+## 느낀 점
+Git에서 commit이나 add를 할 때 파일 색상이나 터미널 표시가 바뀌는 이유를 이제 알게 되었다. 터미널에 M으로 표시되는 것은 "Modified" 상태를 의미하며, 여기서 git add를 하면 변경된 내용이 Staging Area로 옮겨진다. 이후 git commit을 하면 비로소 "Committed" 상태로 저장된다는 흐름을 이해하게 되었다.

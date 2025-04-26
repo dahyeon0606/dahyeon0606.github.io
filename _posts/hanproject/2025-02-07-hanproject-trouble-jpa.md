@@ -6,6 +6,8 @@ categories: [HanProject, Troubleshooting]
 # render_with_liquid: false
 ---
 
+## 시작
+jpa에서 auto_increment가 적용이 안되는 문제가 발생하여 해결하며 작성한 기록이다. 
 
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 오토인크리먼트 지정하는 애노테이션이다.
