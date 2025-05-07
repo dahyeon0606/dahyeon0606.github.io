@@ -16,7 +16,7 @@ categories: ["CI/CD", "깃허브 액션"]
 
 ### 2. 깃허브 액션의 구성 요소
 
-<img width="1226" alt="Image" src="https://github.com/user-attachments/assets/7b3382dd-8142-409f-8b8d-71756eedfc29" />
+<img alt="Image" src='../../assets/images/githubaction.png' />
 (출처)(드림코딩-제발 깃허브 액션🔥 모르는 개발자 없게해 주세요 🙏)
 
 #### 2.1 이벤트(Events)

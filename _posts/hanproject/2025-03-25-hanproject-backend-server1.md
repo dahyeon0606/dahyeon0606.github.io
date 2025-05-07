@@ -15,7 +15,7 @@ categories: [HanProject, Backend]
 깃허브에 푸시하면, 깃허브 액션이 이를 빌드+테스트하여 빌드된 파일을 서버로 넘기고 서버에서 실행 되도록 한다.<br>
 서버에는 스프링부트 빌드 .jar 파일과 Mysql 이 실행 중이고, 프론트로는 리엑트 네이티브를 사용하고 있다.<br>
 
-<img width="843" alt="Image" src="https://github.com/user-attachments/assets/89cfcdbe-57f4-4c70-bc43-d740876f201a" />
+<img width="843" alt="Image" src="../../assets/images/hanproject-backend-server1_1.png" />
 
 ### 잠자기 모드 비활성화
 ```
@@ -45,7 +45,7 @@ ssh hadahyeon@dahyeon-server.local
 
 #### DHCP 서버의 고정 IP 설정
 현재 노트북의 ip 주소를 찾아, 사용중인 ip 주소 정보에서 찾아 선택 > 수동 등록 버튼 > 저장 버튼
-<img width="886" alt="Image" src="https://github.com/user-attachments/assets/db0eac2d-bb58-4369-9b64-d1dc4a7ec0be" />
+<img width="886" alt="Image" src="../../assets/images/hanproject-backend-server1_2.png" />
 
 #### 포트포워드 설정 
 - `규칙 이름` : 내마음대로 설정 (스프링부트 서버로 사용하기 위해 -> spring boot)
@@ -55,7 +55,7 @@ ssh hadahyeon@dahyeon-server.local
 - `내부포트` : 8080~8080
 위와 같이 설정한 후,
 새 규칙 추가 > 저장
-<img width="882" alt="Image" src="https://github.com/user-attachments/assets/9565bc93-361a-4bab-97d0-43ac44104ea1" />
+<img width="882" alt="Image" src="../../assets/images/hanproject-backend-server1_3.png" />
 
 - `규칙 이름` : 내마음대로 설정 (ssh 접근 허용하기 위해 -> ssh server)
 - `내부 ip 주소` : 방금 설정한 고정 ip 주소
@@ -63,10 +63,10 @@ ssh hadahyeon@dahyeon-server.local
 - `외부포트` : 22~22
 - `내부포트` : 22~22
 위와 같이 설정한 후, 저장
-<img width="876" alt="Image" src="https://github.com/user-attachments/assets/0d83b8d7-5859-442e-854c-368779320c93" />
+<img width="876" alt="Image" src="../../assets/images/hanproject-backend-server1_4.png" />
 
 ### DDNS 설정
 **인터넷에서 집이나 회사처럼 "고정 IP가 없는" 네트워크에 도메인 이름을 붙여주는 서비스**
 
 아래 사진대로 등록을 하면, 2-3시간 정도 기다리면 '정상 등록 된다.'
-<img width="876" alt="Image" src="https://github.com/user-attachments/assets/7ed45257-0b04-42e5-871e-ab24efb38ca9" />
+<img width="876" alt="Image" src="../../assets/images/hanproject-backend-server1_5.png" />

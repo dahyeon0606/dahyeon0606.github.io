@@ -21,7 +21,7 @@ ssh-keygen -t rsa -b 4096 -C "github-actions"
 - 비밀번호 설정 질문에 : 엔터 2번
 
 
-<img width="532" alt="Image" src="https://github.com/user-attachments/assets/b0141712-add7-41b1-b89c-8bb0b86994aa" />
+<img width="532" alt="Image" src="../../assets/images/hanproject-backend-server3_sshkey.png" />
 
 키를 생성하면, 개인키와 공개키의 경로가 나옴
 개인키는 /Users/dahyeon/.ssh/id_rsa
@@ -74,7 +74,7 @@ sudo launchctl start com.openssh.sshd
 ssh -i ~/.ssh/id_ed25519 hadahyeon@dahyeon-server.iptime.org
 ```
 
-<img width="594" alt="Image" src="https://github.com/user-attachments/assets/9547280c-c9da-47f8-a29a-2753897ad48d" />
+<img width="594" alt="Image" src="../../assets/images/hanproject-backend-server3_sshaccess.png" />
 
 서버로 원격 접속이 성공한 것을 확인할 수 있다.
 
