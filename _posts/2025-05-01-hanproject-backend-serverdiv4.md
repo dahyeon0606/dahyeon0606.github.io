@@ -1,9 +1,7 @@
 ---
-title: "[HanProject - Backend] <개발 서버, 운영 서버 분리-4> GitHub Actions로 Mac 서버에 배포 자동화"  # 문서 제목 입력
-date: 2025-05-30 21:21:07  +0900# 자동으로 오늘 날짜와 시간을 입력
+title: "[HanProject - Backend] 개발 서버, 운영 서버 분리-4 GitHub Actions로 Mac 서버에 배포 자동화"
+date: 2025-05-01 21:21:07 +0900
 categories: [HanProject, Backend]
-# pin: true
-# render_with_liquid: false
 ---
 
 ```yml
