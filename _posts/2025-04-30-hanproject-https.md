@@ -1,6 +1,6 @@
 ---
 title: "[HanProject - Backend] https 접속 설정하기"  # 문서 제목 입력
-date: 2025-04-30 21:21:07  +0800# 자동으로 오늘 날짜와 시간을 입력
+date: 2025-04-30 21:21:07  +0900# 자동으로 오늘 날짜와 시간을 입력
 categories: [HanProject, Backend]
 # pin: true
 # render_with_liquid: false

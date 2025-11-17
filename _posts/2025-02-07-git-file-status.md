@@ -1,6 +1,6 @@
 ---
 title: "[Git&GitHub - 기본개념] Git 파일 상태(working directory, staging area, git directory)"
-date: 2025-02-07 11:53:26 +0800
+date: 2025-02-07 11:53:26 +0900
 categories: [Git&GitHub, 기본개념]
 ---
 

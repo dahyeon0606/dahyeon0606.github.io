@@ -1,6 +1,6 @@
 ---
 title: "[Git&GitHub - 기본개념] 이전 커밋으로 돌아가기_reset,revert"
-date: 2025-01-15 13:10:00 +0800
+date: 2025-01-15 13:10:00 +0900
 categories: [Git&GitHub, 기본개념]
 # pin: true
 # render_with_liquid: false

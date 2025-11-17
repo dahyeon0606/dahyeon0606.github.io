@@ -1,6 +1,6 @@
 ---
 title: "[HanProject - Troubleshooting] 깃허브 액션으로 메인 브랜치에 푸시하면 코드는 서버에 잘 올라가는데, 새로 추가한 api는 404에러"
-date: 2025-02-07 12:17:35 +0800
+date: 2025-02-07 12:17:35 +0900
 categories: [HanProject, Troubleshooting]
 ---
 

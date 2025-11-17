@@ -1,6 +1,6 @@
 ---
 title: "[Algorithm - 이론] 이분탐색(이진탐색)"
-date: 2025-01-09 14:10:00 +0800
+date: 2025-01-09 14:10:00 +0900
 categories: [Algorithm, 이론]
 # pin: true
 # render_with_liquid: false
