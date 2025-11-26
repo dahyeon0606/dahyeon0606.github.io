@@ -1,7 +1,7 @@
 ---
-title: "[HanProject - Backend] <맥북을 서버로 사용하기-4> 다른 노트북에서 맥북으로 ssh 접근"  # 문서 제목 입력
+title: "[HanProject] <맥북을 서버로 사용하기-4> 다른 노트북에서 맥북으로 ssh 접근"  # 문서 제목 입력
 date: 2025-03-25 21:21:07  +0900# 자동으로 오늘 날짜와 시간을 입력
-categories: [HanProject, Backend]
+categories: [HanProject, Server]
 # pin: true
 # render_with_liquid: false
 ---

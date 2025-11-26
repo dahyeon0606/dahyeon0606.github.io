@@ -1,7 +1,7 @@
 ---
-title: "[HanProject - Backend] Claude AI와 함께 테스트 코드 커버리지 50%→80% 개선하기 (2/N) - Flyway로 데이터 일관성 보장"
+title: "[HanProject] Claude AI와 함께 테스트 코드 커버리지 50%→80% 개선하기 (2/N) - Flyway로 데이터 일관성 보장"
 date: 2025-11-24 22:30:00 +0900
-categories: [HanProject, Backend]
+categories: [HanProject, TestCode]
 tags: [Spring Boot, Flyway, 데이터베이스 마이그레이션, 테스트 코드, MySQL, 리팩토링]
 ---
 

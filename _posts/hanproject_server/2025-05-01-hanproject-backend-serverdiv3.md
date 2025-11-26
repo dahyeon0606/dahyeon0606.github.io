@@ -1,7 +1,7 @@
 ---
-title: "[HanProject - Backend] <개발 서버, 운영 서버 분리-3> 서버에 파일 생성 및 도커 작동 여부 확인"  # 문서 제목 입력
+title: "[HanProject] <개발 서버, 운영 서버 분리-3> 서버에 파일 생성 및 도커 작동 여부 확인"  # 문서 제목 입력
 date: 2025-05-10 21:21:07 +0900
-categories: [HanProject, Backend]
+categories: [HanProject, Server]
 # pin: true
 # render_with_liquid: false
 ---

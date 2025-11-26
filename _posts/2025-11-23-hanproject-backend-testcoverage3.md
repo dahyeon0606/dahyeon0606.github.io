@@ -1,7 +1,7 @@
 ---
-title: "[HanProject - Backend] Claude AI와 함께 테스트 코드 커버리지 50%→80% 개선하기 (3/N) - 테스트로 발견한 N+1 문제와 Flyway 완전 정복"
+title: "[HanProject] Claude AI와 함께 테스트 코드 커버리지 50%→80% 개선하기 (3/N) - 테스트로 발견한 N+1 문제와 Flyway 완전 정복"
 date: 2025-11-27 00:00:00 +0900
-categories: [HanProject, Backend]
+categories: [HanProject, TestCode]
 tags: [Spring Boot, 테스트 코드, JUnit, Mockito, N+1 문제, Flyway, Docker, 리팩토링]
 ---
 
@@ -329,78 +329,12 @@ Migration checksum mismatch for migration version 2
 → 데이터 복구!
 ```
 
-### 데이터 자동 복구 구현
-
-**나:** "그럼 기본 아이템도 자동 복구 되게 하려면 파일 내용은 유지하되 R로 시작하는 파일 만들면 돼?"
-
-**Claude:** "V__ 파일은 그대로 두고, **별도로 R__ 파일을 추가**해야 합니다."
-
-**최종 구조:**
-```
-src/main/resources/db/migration/
-├── V1__init_default_store_items.sql      # 초기 생성 (한 번만)
-├── V2__init_handbook_data.sql            # 초기 생성 (한 번만)
-├── R__ensure_store_items.sql             # 자동 복구
-└── R__ensure_handbook_data.sql           # 자동 복구
-```
-
-**R__ensure_store_items.sql:**
-```sql
--- Repeatable Migration: 기본 무료 아이템 자동 복구
--- This file ensures all free default store items exist
--- Last updated: 2025-11-27
-
-INSERT INTO store (price, name, item_type)
-SELECT 0, 'No Background', 'BACKGROUND'
-WHERE NOT EXISTS (
-    SELECT 1 FROM store 
-    WHERE price = 0 AND item_type = 'BACKGROUND'
-);
-
--- 나머지 아이템들도 동일...
-```
-
-**복구 방법:**
-```bash
-# 1. 데이터 삭제 발생
-DELETE FROM store WHERE item_type = 'SOFA';
-
-# 2. R__ 파일 수정 (주석만 바꿔도 됨)
-# -- Last updated: 2025-11-28
-
-# 3. 애플리케이션 재시작
-docker-compose restart spring-app
-
-# 4. 체크섬 변경 → R__ 재실행 → SOFA 복구 완료! ✅
-```
-
-### flyway_schema_history 테이블
-
-```sql
-SELECT * FROM flyway_schema_history ORDER BY installed_rank;
-```
-
-| installed_rank | version | description | type | checksum |
-|----------------|---------|-------------|------|----------|
-| 1 | 0 | << Flyway Baseline >> | BASELINE | NULL |
-| 2 | 1 | init default store items | SQL | 123456 |
-| 3 | 2 | init handbook data | SQL | 789012 |
-| 4 | NULL | ensure store items | REPEATABLE | 111111 |
-| 5 | NULL | ensure handbook data | REPEATABLE | 222222 |
-
 **핵심 차이:**
 - **V__**: version 숫자 있음, 한 번만 실행
 - **R__**: version NULL, 체크섬 변경 시 재실행
 
-## Docker 빌드 최적화
 
-배포 과정에서 Docker 관련 질문이 생겼습니다.
-
-**나:** "깃에 커밋을 안 하면 도커에서 읽지 못해? 내 로컬 환경에 있는 도커인데?"
-
-**Claude:** "아니요! **Git 커밋과는 전혀 상관없습니다**."
-
-### Docker 빌드의 진실
+## Docker 빌드의 진실
 
 ```
 파일 생성/수정 (로컬)
@@ -410,8 +344,6 @@ SELECT * FROM flyway_schema_history ORDER BY installed_rank;
 Docker 이미지 생성 (docker-compose build)
     ↓
 컨테이너 실행 (docker-compose up)
-
-Git 커밋은 필요 없음! ❌
 ```
 
 ### 올바른 Docker 빌드 순서
@@ -430,128 +362,8 @@ V2 파일 생성
 → V2 실행됨! ✅
 ```
 
-**나:** "docker-compose -f docker-compose.prod.yml up -d --build 이렇게 한번만 실행하면?"
-
-**Claude:** "훨씬 간단합니다! 하지만 주의사항이 있습니다."
-
-### --build 옵션의 이해
-
-```bash
-# 완벽한 한 줄 명령어
-./gradlew clean build && docker-compose -f docker-compose.prod.yml up -d --build
-```
-
-**동작 순서:**
-1. `./gradlew clean build` → V2 파일이 jar에 포함
-2. `--build` → Docker 이미지 빌드 (jar 복사)
-3. `up -d` → 컨테이너 실행
-4. Flyway가 V2 실행 ✅
-
 **핵심:** `--build`는 Docker 이미지만 재빌드하므로, **애플리케이션 빌드(`./gradlew build`)는 별도로 필요**합니다!
 
-## V2가 실행되지 않을 때 디버깅
-
-**나:** "히스토리에 v1까지만 실행 됐고, v2를 실행한 적이 없다고 뜨는데 왜 실행이 안 될까?"
-
-### V2 실행 조건 체크리스트
-
-```
-✅ flyway_schema_history에 version 2가 없음
-✅ V1이 이미 실행됨 (순서 보장)
-✅ V2 파일이 존재
-✅ Flyway 활성화 (spring.flyway.enabled=true)
-✅ 체크섬 불일치 없음
-```
-
-### 가장 흔한 문제들
-
-#### 1. 파일이 Docker 이미지에 포함 안 됨 (90%)
-```bash
-# 해결 방법
-./gradlew clean build
-docker-compose build --no-cache
-docker-compose up -d
-```
-
-#### 2. 캐시된 이미지 사용 (7%)
-```bash
-# 해결 방법
-docker-compose down
-docker-compose build --no-cache
-docker-compose up -d
-```
-
-#### 3. 파일명 오타 (3%)
-```bash
-# 확인
-ls -la src/main/resources/db/migration/
-
-# 정확한 이름:
-V2__init_handbook_data.sql  # ✅ 언더스코어 2개
-V2_init_handbook_data.sql   # ❌ 언더스코어 1개
-v2__init_handbook_data.sql  # ❌ 소문자 v
-```
-
-### 디버깅 명령어 모음
-
-```bash
-# 1. 파일 존재 확인
-ls -la src/main/resources/db/migration/V2__init_handbook_data.sql
-
-# 2. 빌드 확인
-./gradlew clean build
-
-# 3. jar에 V2 포함 확인
-jar tf build/libs/*.jar | grep V2
-
-# 4. Docker 이미지 재빌드
-docker-compose build --no-cache
-
-# 5. 로그에서 Flyway 확인
-docker-compose logs spring-app | grep -i flyway
-
-# 예상 출력:
-# Migrating schema `handali` to version "2 - init handbook data"
-# Successfully applied 1 migration
-```
-
-## 최종 정리: 완벽한 워크플로우
-
-### 개발 환경에서 마이그레이션 추가
-
-```bash
-# 1. 마이그레이션 파일 생성
-src/main/resources/db/migration/V2__init_handbook_data.sql
-
-# 2. 빌드 & 실행 (한 줄로)
-./gradlew clean build && docker-compose -f docker-compose.prod.yml up -d --build
-
-# 3. 로그 확인
-docker-compose -f docker-compose.prod.yml logs -f spring-app | grep -i flyway
-
-# 4. DB 확인
-docker exec -it mysql-container mysql -u root -p
-mysql> SELECT * FROM flyway_schema_history WHERE version = '2';
-mysql> SELECT COUNT(*) FROM handbook;  # 216이어야 함
-```
-
-### 전체 마이그레이션 구조
-
-```
-src/main/resources/db/migration/
-│
-├── V1__init_default_store_items.sql
-│   └─ 역할: 초기 4개 store 아이템 생성 (한 번만)
-│
-├── V2__init_handbook_data.sql
-│   └─ 역할: 초기 216개 handbook 생성 (한 번만)
-│
-├── R__ensure_store_items.sql
-│   └─ 역할: store 아이템 자동 복구 (파일 수정 시 재실행)
-│
-└── R__ensure_handbook_data.sql
-    └─ 역할: handbook 자동 복구 (파일 수정 시 재실행)
-```
 
 ## 테스트 작성의 진정한 가치
 
@@ -608,83 +420,11 @@ src/main/resources/db/migration/
 
 ```
 ⏸️ StoreService
-⏸️ QuestService
 ⏸️ UserItemService
 ⏸️ StatService
 ⏸️ JobService
 ... 기타 Service들
 ```
-
-## 배운 핵심 개념 정리
-
-### 1. Flyway 마이그레이션 비교
-
-| 타입 | 실행 | 용도 | 수정 | 예시 |
-|------|------|------|------|------|
-| **V__** | 1번 | 스키마 변경, 초기 데이터 | 금지 (에러) | V1__init.sql |
-| **R__** | 체크섬 변경 시 | View, 참조 데이터, 복구 | 가능 | R__ensure.sql |
-
-### 2. N+1 문제
-
-```java
-// ❌ N+1 문제
-for (Handali handali : handalis) {  // N번 반복
-    repository.find...(handali);    // 매번 DB 조회
-}
-// 한달이 10명 = 11번 쿼리 (1 + 10)
-
-// ✅ 해결 방법 (추후 적용 예정)
-List<HandaliStat> allStats = repository.findByHandaliIn(handalis);  // 1번 쿼리
-Map<Handali, List<HandaliStat>> grouped = ...;  // 메모리에서 그룹핑
-// 한달이 10명 = 2번 쿼리 (1 + 1)
-```
-
-### 3. 테스트 작성 순서
-
-```
-1. 테스트 작성 (현재 동작 검증) ✅
-2. 모든 테스트 통과 확인 ✅
-3. 로직 개선 (N+1 해결, 리팩토링)
-4. 테스트 재실행 → 여전히 통과?
-   - 통과: 안전하게 개선 완료 ✅
-   - 실패: 뭔가 잘못됨, 롤백 🚨
-```
-
-### 4. Docker 빌드
-
-```bash
-# 가장 간단한 명령어
-./gradlew clean build && docker-compose up -d --build
-
-# 캐시 문제가 있다면
-docker-compose down && \
-docker-compose build --no-cache && \
-docker-compose up -d
-```
-
-## AI와 협업의 진화
-
-### 1편: 기본 테스트 작성
-- Mock 사용법
-- ArgumentCaptor
-- 테스트 패턴 학습
-
-### 2편: Flyway 도입
-- 데이터 일관성
-- 마이그레이션 전략
-- SQL 패턴 학습
-
-### 3편: 문제 발견과 계획 수립 (오늘)
-- N+1 문제 인식
-- 복잡한 코드 발견
-- 테스트 우선 개발의 가치
-- Docker 최적화
-
-**AI와 대화하며 배운 점:**
-- 단순히 코드를 받는 게 아니라 **왜?**를 묻기
-- 생성된 코드를 **꼼꼼히 리뷰**하기
-- 이해 안 되는 부분 **즉시 질문**하기
-- 배운 내용을 **블로그로 정리**하며 내 것으로 만들기
 
 ## 앞으로의 계획
 
@@ -745,17 +485,3 @@ docker-compose up -d
 다음 글에서는 남은 Service들의 테스트를 완료하고, N+1 문제를 실제로 해결하며 성능을 개선하는 과정을 공유하겠습니다.
 
 테스트 커버리지 80% 달성과 성능 최적화까지... 화이팅! 🚀
-
----
-
-**다음 글 예고:**  
-[HanProject - Backend] 테스트 코드 커버리지 개선하기 (4/N) - N+1 문제 해결과 실전 성능 최적화
-
----
-
-## 참고 자료
-
-- [Flyway Documentation](https://flywaydb.org/documentation/)
-- [Spring Boot Testing Best Practices](https://spring.io/guides/gs/testing-web/)
-- [JPA N+1 Problem Solutions](https://vladmihalcea.com/n-plus-1-query-problem/)
-- [Docker Compose Best Practices](https://docs.docker.com/compose/production/)

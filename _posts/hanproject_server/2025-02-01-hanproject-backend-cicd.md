@@ -1,7 +1,7 @@
 ---
-title: "[HanProject - Backend] 스프링 부트 백엔드 aws 서버 배포 및 github action으로 ci/cd 환경 구성"
+title: "[HanProject] 스프링 부트 백엔드 aws 서버 배포 및 github action으로 ci/cd 환경 구성"
 date: 2025-02-01 2:00:00 +0900
-categories: [HanProject, Backend]
+categories: [HanProject, Server]
 # pin: true
 # render_with_liquid: false
 ---

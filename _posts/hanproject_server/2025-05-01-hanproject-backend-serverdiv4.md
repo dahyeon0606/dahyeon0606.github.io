@@ -1,7 +1,7 @@
 ---
-title: "[HanProject - Backend] <개발 서버, 운영 서버 분리-4> GitHub Actions로 Mac 서버에 배포 자동화"
+title: "[HanProject] <개발 서버, 운영 서버 분리-4> GitHub Actions로 Mac 서버에 배포 자동화"
 date: 2025-05-01 21:21:07 +0900
-categories: [HanProject, Backend]
+categories: [HanProject, Server]
 ---
 
 ```yml

@@ -1,7 +1,7 @@
 ---
-title: "[HanProject - Backend] <개발 서버, 운영 서버 분리-1> 도메인 분리 및 엔진엑스 설정"  # 문서 제목 입력
+title: "[HanProject] <개발 서버, 운영 서버 분리-1> 도메인 분리 및 엔진엑스 설정"  # 문서 제목 입력
 date: 2025-05-01 21:21:07 +0900
-categories: [HanProject, Backend]
+categories: [HanProject, Server]
 # pin: true
 # render_with_liquid: false
 ---

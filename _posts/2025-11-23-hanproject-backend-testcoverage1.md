@@ -1,7 +1,7 @@
 ---
-title: "[HanProject - Backend] Claude AI와 함께 테스트 코드 커버리지 50%→80% 개선하기 (1/N)"
+title: "[HanProject] Claude AI와 함께 테스트 코드 커버리지 50%→80% 개선하기 (1/N)"
 date: 2025-11-23 21:21:07 +0900
-categories: [HanProject, Backend]
+categories: [HanProject, TestCode]
 tags: [Spring Boot, 테스트 코드, JUnit, Mockito, AI, Claude]
 ---
 
